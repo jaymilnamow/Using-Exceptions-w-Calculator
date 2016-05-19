@@ -20,12 +20,23 @@ public class Calculator {
         return a*b;
     }
 
+/*
     public static double divide(double a, double b) throws Exception{
         if(b == 0) {
             throw new Exception();
         }
-            return a / b;
-        }
-
+            return a/b;
     }
+
+    //previous code showing exception
+*/
+    public static double divide(double a, double b) throws DivisionByZeroException{
+        if(b == 0) {
+            throw new DivisionByZeroException();
+        }
+        return a/b;
+    }
+
+
 }
+
